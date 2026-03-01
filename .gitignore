@@ -5,3 +5,4 @@ __pycache__/
 *.whl
 *.zip
 docx_temp/
+venv/
