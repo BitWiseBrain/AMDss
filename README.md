@@ -1,6 +1,6 @@
 # 🧠 Linguist-Core: Sovereign Distributed Knowledge Graph
 
-Linguist-Core is a high-performance, edge-first Knowledge Graph and RAG (Retrieval-Augmented Generation) engine designed for the **AMD Hackathon 2026**. It allows users to ingest complex documents, extract semantic relationships in real-time, and synchronize that knowledge across a distributed peer-to-peer network—all running locally on AMD hardware.
+Linguist-Core is a high-performance, edge-first Knowledge Graph and RAG (Retrieval-Augmented Generation) engine designed for the **AMD Slingshot 2026**. It allows users to ingest complex documents, extract semantic relationships in real-time, and synchronize that knowledge across a distributed peer-to-peer network—all running locally on AMD hardware.
 
 > [!IMPORTANT]
 > This system is designed for **Sovereign AI**. No cloud data, no external APIs. Every computation happens on your silicon.
