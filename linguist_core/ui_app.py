@@ -94,11 +94,16 @@ with gr.Blocks(theme=custom_theme, title="Linguist-Core | AMD Hackathon") as app
         query_btn.click(ask_question, inputs=[text_query, audio_query], outputs=query_out)
         
     with gr.Tab("3. Distributed Network Visualization"):
-        gr.Markdown("Visualize the current state of the local graph, including knowledge synced from peers. AMD nodes are in red.")
-        refresh_btn = gr.Button("Refresh Graph")
+        gr.Markdown("Visualize the current state of the local graph. **This updates automatically in real-time** as new knowledge is synced from peers. AMD nodes are in red.")
+        
         graph_view = gr.HTML()
-        refresh_btn.click(render_graph, inputs=[], outputs=graph_view)
+        
+        # Eager rendering on mount
         app.load(render_graph, inputs=[], outputs=graph_view)
+        
+        # Real-time polling: Auto-refresh the graph every 3 seconds
+        timer = gr.Timer(3)
+        timer.tick(render_graph, inputs=[], outputs=graph_view)
 
 if __name__ == "__main__":
     app.launch(server_port=7860, share=False)
